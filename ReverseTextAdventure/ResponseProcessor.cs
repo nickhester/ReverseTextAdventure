@@ -25,7 +25,7 @@ namespace ReverseTextAdventure
 			Question question = statement as Question;
 			if (question != null)
 			{
-				if (question.infoRequested == typeof(Area))
+				if (question.infoRequested == typeof(Area))		// update area info
 				{
 					world.UpdateThisArea(response.text);
 				}

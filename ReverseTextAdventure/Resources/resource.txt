@@ -1,0 +1,6 @@
+<Question>	// Question text;type requested
+Where am I?;Area
+What do I have?;Item
+What is in front of me?;Item
+<Action> // Action text
+I pick up...

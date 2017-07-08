@@ -19,7 +19,7 @@ namespace ReverseTextAdventure
 		public Resources()
 		{
 			// read all resources
-			resource = File.ReadAllText(@"c:\RtaResources\resource.txt", Encoding.UTF8);
+			resource = File.ReadAllText(@"Resources\resource.txt", Encoding.UTF8);
 
 			string currentSection = "";
 			foreach (var line in resource.Split('\n'))
