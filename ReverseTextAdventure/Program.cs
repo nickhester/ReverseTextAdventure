@@ -13,12 +13,13 @@ namespace ReverseTextAdventure
 			Resources resources = new Resources();
 			World world = new World();
 			ResponseProcessor responseProcessor = new ResponseProcessor(world);
+			StatementChooser statementChooser = new StatementChooser(world, resources);
 
 			string playerResponseText = "";
 			PlayerResponse playerResponse;
 			while (true)
 			{
-				Statement statement = resources.GetResource(typeof(Question));
+				Statement statement = statementChooser.ChooseStatement(typeof(Question));
 				Console.WriteLine(statement.text);
 
 				playerResponseText = Console.ReadLine();
@@ -26,10 +27,6 @@ namespace ReverseTextAdventure
 
 				responseProcessor.ProcessResponse(statement, playerResponse);
 			}
-
-			//string a = Console.ReadLine();
-			//Console.WriteLine(a);
-			
 		}
 	}
 }

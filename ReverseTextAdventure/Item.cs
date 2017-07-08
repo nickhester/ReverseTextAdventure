@@ -9,16 +9,11 @@ namespace ReverseTextAdventure
 	class Item
 	{
 		public string Name;
+		public List<Item> containedItems = new List<Item>();
 
-		public enum ItemUse
-		{
-			TOOL,
-			LIGHT,
-			WEAPON,
-			DIRECTIONS,
-			INFORMATION,
-			FOOD
-		}
+		// attributes
+		public bool IsPrimarilyAContainer = false;
+		public bool IsCarryable = false;
 
 		public Item(string Name)
 		{

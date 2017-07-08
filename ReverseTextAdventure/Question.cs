@@ -9,8 +9,9 @@ namespace ReverseTextAdventure
 	class Question : Statement
 	{
 		public System.Type infoRequested;
+		public string location;
 
-		public Question(string text, string infoRequestedString) : base(text)
+		public Question(string text, string infoRequestedString, string location) : base(text)
 		{
 			switch (infoRequestedString)
 			{
@@ -24,6 +25,8 @@ namespace ReverseTextAdventure
 					Console.Error.WriteLine("error forming question");
 					break;
 			}
+
+			this.location = location;
 		}
 	}
 }

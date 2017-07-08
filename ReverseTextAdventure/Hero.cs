@@ -8,12 +8,17 @@ namespace ReverseTextAdventure
 {
 	class Hero
 	{
-		public List<Container> Holders = new List<Container>();
+		public List<Item> Holders = new List<Item>();
 
 		public Hero()
 		{
-			Holders.Add(new ReverseTextAdventure.Container("pocket"));
-			Holders.Add(new ReverseTextAdventure.Container("hands"));
+			Holders.Add(new Item("hands"));
+			Holders.Add(new Item("pocket"));
+		}
+
+		public void AddItem(Item item)
+		{
+			Holders[0].containedItems.Add(item);		// currently hard-coded to hands
 		}
 	}
 }

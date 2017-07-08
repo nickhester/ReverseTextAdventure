@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Action.cs" />
     <Compile Include="Area.cs" />
-    <Compile Include="Container.cs" />
     <Compile Include="Creature.cs" />
     <Compile Include="Hero.cs" />
     <Compile Include="Item.cs" />
@@ -61,6 +60,7 @@
     <Compile Include="Resources.cs" />
     <Compile Include="ResponseProcessor.cs" />
     <Compile Include="Statement.cs" />
+    <Compile Include="StatementChooser.cs" />
     <Compile Include="World.cs" />
   </ItemGroup>
   <ItemGroup>

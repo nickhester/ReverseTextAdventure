@@ -14,8 +14,6 @@ namespace ReverseTextAdventure
 		List<Question> questions = new List<Question>();
 		List<Action> actions = new List<Action>();
 
-		Random random = new Random();
-
 		public Resources()
 		{
 			// read all resources
@@ -37,7 +35,7 @@ namespace ReverseTextAdventure
 					if (currentSection == "Question")
 					{
 						string[] tokens = line.Split(';');
-						Question q = new Question(tokens[0], tokens[1]);
+						Question q = new Question(tokens[0], tokens[1], tokens[2]);
 						questions.Add(q);
 					}
 					else if (currentSection == "Action")
@@ -50,14 +48,9 @@ namespace ReverseTextAdventure
 			} 
 		}
 
-		public Statement GetResource(System.Type type)
+		public List<Question> GetQuestions()
 		{
-			if (type == typeof(Question))
-				return questions[random.Next(questions.Count())];
-			else if (type == typeof(Action))
-				return actions[random.Next(actions.Count())];
-			else
-				return null;
+			return questions;
 		}
 	}
 }

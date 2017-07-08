@@ -1,6 +1,10 @@
-<Question>	// Question text;type requested
-Where am I?;Area
-What do I have?;Item
-What is in front of me?;Item
+<Question>	// Question text;type requested;location
+Where am I?;Area;Here
+What do I have?;Item;Hero
+What is in front of me?;Item;Front
+What is behind me?;Item;Behind
+What other area can I get to from here?;Area;Connection
 <Action> // Action text
-I pick up...
+I pick up the [Item];[Pickup]
+<Future>
+What is in the [Item]?;Item;[Item]

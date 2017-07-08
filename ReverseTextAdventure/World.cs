@@ -18,9 +18,40 @@ namespace ReverseTextAdventure
 			areas.Add(currentArea);
 		}
 
-		public void UpdateThisArea(string name)
+		public void NameThisArea(string name)
 		{
 			currentArea.name = name;
+		}
+
+		public void AddItem(string locationName, Item item)
+		{
+			if (locationName.ToLower() == "hero")
+			{
+				hero.AddItem(item);
+			}
+			else
+			{
+				currentArea.AddItem(locationName, item);
+			}
+		}
+
+		public bool HasCurrentLocationInfo()
+		{
+			if (currentArea.name == null)
+			{
+				return false;
+			}
+			return true;
+		}
+
+		public void AddAreaConnection(Area areaConnection)
+		{
+			if (!areas.Contains(areaConnection))
+			{
+				areas.Add(areaConnection);
+			}
+
+			currentArea.connections.Add(areaConnection);
 		}
 	}
 }
